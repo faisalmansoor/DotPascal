@@ -1,0 +1,15 @@
+****FACTORIAL****
+0 : FACTORIAL 
+1 : N 
+2 : I 
+
+
+****Global Symbol Table****
+0 : WRITE 
+1 : READ 
+2 : READINT 
+3 : READREAL 
+4 : I 
+5 : FACTORIAL 
+
+

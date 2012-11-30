@@ -1,0 +1,8 @@
+procedure two (n,i:integer);
+      var p : integer;
+      begin
+  
+       for p := 0 to p < 10 do
+           p := 1;
+      end
+  

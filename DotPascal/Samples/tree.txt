@@ -1,0 +1,6 @@
+.assembly DotPascal{} 
+.class PROCTEST
+{ 
+ .field private static int32 I 
+ .method public hidebysig static int32 FACTORIAL(int32N) cil managed 
+ { 
