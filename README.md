@@ -19,6 +19,7 @@ Following are the features of DotPascal
 
   
 2) Supports Functions and Procedures
+`````pascal
    function diff(a,b:integer):integer;
     begin
   	diff := a - b;
@@ -27,37 +28,47 @@ Following are the features of DotPascal
    begin
   	Write(a,b);
    end
-
+`````
 
 3) Buit In Functions
    a) ReadInt ( Reads an int from std input)
    b) ReadFloat (Reads a float from std input)
    c) Write (A variable length argument function that writes arguments to std output)
 
-     
+`````pascal     
     Write('\n10 / 3 = ',div(10));    
     Write(i,j,3,5,2.3,'abcd');
-
+`````
 
 4)  N-Dimension Array
+
+`````pascal
       var g:array[1..3,1..2,6..7,3..5] of real;
+`````
 
 5) Type Checking both on basic type and array type
+
+`````pascal
     program procTest;    
     var g:array[1..3,1..2,6..7,3..5] of real;
     procedure proc(q:array[1..3,1..2,6..7,3..5] of integer);
     begin
     end
-  
+`````
+
+`````pascal
     begin  
      proc( g );//Type Mismatch : Function or procedure expects integer
      g[3,1,6,4] := 9.1;   
      Write(g[3,1,6,2]);
     end.
+`````
 
 6) Automatic Type Conversion 
 
 7) Implented FOR with step, without  step, to and downto
+
+`````pascal
     for i := 1 to 10 step 2 do
       begin
        Write('loop for time ',i,'\n');
@@ -70,14 +81,18 @@ Following are the features of DotPascal
 
    for i := 10 downto 1 do
          a[i] := i;
+`````
 
 8) Supports While
     
+`````pascal
     while 1 = 1 do
        n := 1;
+`````
 
 9) Supports if,if-else
 
+`````pascal
    program ifTest;    
     var i:integer;
     begin
@@ -88,64 +103,73 @@ Following are the features of DotPascal
       else
         Write('You entered ',i,' which is less than 10');  
     end.
+`````
 
 10) Supports Recursion 
      
-   program procTest; 
-   var i:integer;  
-   function factorial ( N :integer ):integer;
-   {
-     Computes N!
-     Pre : N >= 0
-     Post: Returns the product 1*2*3 .... * N for N > 0
-          Returns 1 for N = 0
-   }
-   var i:integer;
-   begin   
-    if  N <= 1 then
-      factorial := 1;   
-    else 
-      factorial := N * factorial( N - 1);
-   end  
-   begin  
-    Write('Enter any number to caluculate its factorial :');
-    i := ReadInt();   
-   Write('Factorial of ',i,' = ',factorial(i));  
-  end.
+`````pascal
+    program procTest; 
+    var i:integer;  
+    function factorial ( N :integer ):integer;
+    {
+      Computes N!
+      Pre : N >= 0
+      Post: Returns the product 1*2*3 .... * N for N > 0
+           Returns 1 for N = 0
+    }
+    var i:integer;
+    begin   
+     if  N <= 1 then
+       factorial := 1;   
+     else 
+       factorial := N * factorial( N - 1);
+     end  
+    begin  
+     Write('Enter any number to caluculate its factorial :');
+     i := ReadInt();   
+     Write('Factorial of ',i,' = ',factorial(i));  
+    end.
+`````
 
 11) Supports case with default
 
-program procTest;    
-  var i,j:integer;
-  begin 
-   case i of
-    0:      
-      begin
-      Write(' outer 0\n');
-       j := i + 1;
-       case j of
-         0:
-          Write( ' inner 0\n');
-         1,2,3,4,5:
-          Write( ' inner 1\n');         
-         default:
-	   Write('inner default');           
-       end
-      end 
-    4:
-      Write(' outer 4\n');
-    default:
-      Write(' outer default');       
-    
-    end
-  end.
+`````pascal
+    program procTest;    
+    var i,j:integer;
+    begin 
+    	case i of
+      		0:      
+       			begin
+         			Write(' outer 0\n');
+         			j := i + 1;
+         			case j of
+			        	0:
+             					Write( ' inner 0\n');
+           				1,2,3,4,5:
+             					Write( ' inner 1\n');         
+           				default:
+	     					Write('inner default');           
+         			end
+      			end 
+      		4:
+      			Write(' outer 4\n');
+     		default:
+      			Write(' outer default');       
+	end
+    end.
+`````
 
 12) Supports  Operators
+
+`````pascal
      a) +,-,*,/,mod,and,or
      b) Relational Operators =,<>,<,>,<=,>=
-
+`````
 
 13) Comments of the form { }    
 
 14) Function call
+
+`````pascal
     Write(sum(7,sum(1,sum(2,sum(sum(4,5),4)))));
+`````
